@@ -2,13 +2,13 @@ https://docs.djangoproject.com/en/1.9/intro/tutorial01/
 
     django-admin startproject pysec_project
 
-pysec_project
-├── manage.py
-└── pysec_project
-    ├── __init__.py
-    ├── settings.py
-    ├── urls.py
-    └── wsgi.py
+    pysec_project
+    ├── manage.py
+    └── pysec_project
+        ├── __init__.py
+        ├── settings.py
+        ├── urls.py
+        └── wsgi.py
 
     python manage.py runserver
 
@@ -17,18 +17,18 @@ We then move to the parent pysec_project dir and run the following command to in
 
     python manage.py migrate
 
-.
-├── README.md
-├── db.sqlite3
-├── manage.py
-└── pysec_project
-    ├── __init__.py
-    ├── __init__.pyc
-    ├── settings.py
-    ├── settings.pyc
-    ├── urls.py
-    ├── urls.pyc
-    └── wsgi.py
+    .
+    ├── README.md
+    ├── db.sqlite3
+    ├── manage.py
+    └── pysec_project
+        ├── __init__.py
+        ├── __init__.pyc
+        ├── settings.py
+        ├── settings.pyc
+        ├── urls.py
+        ├── urls.pyc
+        └── wsgi.py
 
 we note that our file structure has changed.
 
@@ -41,27 +41,27 @@ Your apps can live anywhere on your Python path. In this tutorial, we’ll creat
 
 In this example I used the app_name pysec. The tree is as follows:
 
-.
-├── README.md
-├── db.sqlite3
-├── manage.py
-├── pysec
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── migrations
-│   │   └── __init__.py
-│   ├── models.py
-│   ├── tests.py
-│   └── views.py
-└── pysec_project
-    ├── __init__.py
-    ├── __init__.pyc
-    ├── settings.py
-    ├── settings.pyc
-    ├── urls.py
-    ├── urls.pyc
-    └── wsgi.py
+    .
+    ├── README.md
+    ├── db.sqlite3
+    ├── manage.py
+    ├── pysec
+    │   ├── __init__.py
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── migrations
+    │   │   └── __init__.py
+    │   ├── models.py
+    │   ├── tests.py
+    │   └── views.py
+    └── pysec_project
+        ├── __init__.py
+        ├── __init__.pyc
+        ├── settings.py
+        ├── settings.pyc
+        ├── urls.py
+        ├── urls.pyc
+        └── wsgi.py
 
 We skip the views and urls portion of the tutorial.
 
@@ -116,46 +116,46 @@ Run python manage.py migrate to apply those changes to the database.
 lets see if we can import the SEC database, first we have to bring over all the files in the pysec/pysec/management folder
 the tree now looks like the following:
 
-.
-├── README.md
-├── cof-20131231.xml
-├── db.sqlite3
-├── manage.py
-├── pysec
-│   ├── __init__.py
-│   ├── __init__.pyc
-│   ├── admin.py
-│   ├── admin.pyc
-│   ├── apps.py
-│   ├── apps.pyc
-│   ├── example.py
-│   ├── management
-│   │   ├── __init__.py
-│   │   └── commands
-│   │       ├── __init__.py
-│   │       ├── sec_import_index.py
-│   │       └── sec_xbrl_to_csv.py
-│   ├── migrations
-│   │   ├── 0001_initial.py
-│   │   ├── 0001_initial.pyc
-│   │   ├── __init__.py
-│   │   └── __init__.pyc
-│   ├── models.py
-│   ├── models.pyc
-│   ├── tests.py
-│   ├── views.py
-│   ├── xbrl.py
-│   ├── xbrl.pyc
-│   ├── xbrl_fundamentals.py
-│   └── xbrl_fundamentals.pyc
-└── pysec_project
-    ├── __init__.py
-    ├── __init__.pyc
-    ├── settings.py
-    ├── settings.pyc
-    ├── urls.py
-    ├── urls.pyc
-    └── wsgi.py
+    .
+    ├── README.md
+    ├── cof-20131231.xml
+    ├── db.sqlite3
+    ├── manage.py
+    ├── pysec
+    │   ├── __init__.py
+    │   ├── __init__.pyc
+    │   ├── admin.py
+    │   ├── admin.pyc
+    │   ├── apps.py
+    │   ├── apps.pyc
+    │   ├── example.py
+    │   ├── management
+    │   │   ├── __init__.py
+    │   │   └── commands
+    │   │       ├── __init__.py
+    │   │       ├── sec_import_index.py
+    │   │       └── sec_xbrl_to_csv.py
+    │   ├── migrations
+    │   │   ├── 0001_initial.py
+    │   │   ├── 0001_initial.pyc
+    │   │   ├── __init__.py
+    │   │   └── __init__.pyc
+    │   ├── models.py
+    │   ├── models.pyc
+    │   ├── tests.py
+    │   ├── views.py
+    │   ├── xbrl.py
+    │   ├── xbrl.pyc
+    │   ├── xbrl_fundamentals.py
+    │   └── xbrl_fundamentals.pyc
+    └── pysec_project
+        ├── __init__.py
+        ├── __init__.pyc
+        ├── settings.py
+        ├── settings.pyc
+        ├── urls.py
+        ├── urls.pyc
+        └── wsgi.py
 
     python manage.py sec_import_index
 

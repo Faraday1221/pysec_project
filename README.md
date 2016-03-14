@@ -159,9 +159,9 @@ the tree now looks like the following:
 
     python manage.py sec_import_index
 
-This creates the Index() model. To download any filing, call .download() on that model instance. To get its XBRL attributes if it's an XBRL filing, call .xbrl() on it and look at the .fields attribute of the returned model.
+_note this takes about 20-30 min to run_
 
-
+> This creates the Index() model. To download any filing, call .download() on that model instance. To get its XBRL attributes if it's an XBRL filing, call .xbrl() on it and look at the .fields attribute of the returned model.
 
 
 we can try and see if the PYSEC files work with a sample xml file, for test purposed I downloaded the file 'cof-20131231.xml'
@@ -178,3 +178,18 @@ To get any XBRL term:
 x.GetFactValue(XMBL TAG, "Duration" or "Instant" (depending on if it's a year-long or snapshot value))
 
 For an example of generating a CSV of a list of companies, see management/commands/xbrl_to_csv.py
+
+### note:
+Attempting to run
+
+    from pysec.models import Index
+from <path>
+
+returned this error:
+    ImproperlyConfigured: Requested setting DATA_DIR, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+
+[This](http://stackoverflow.com/questions/15556499/django-db-settings-improperly-configured-error) article provides some background, but ultimately I decided to try and use the API, as described in the Django [Tutorial02](https://docs.djangoproject.com/en/1.9/intro/tutorial02/). Accessed with the following
+
+    python manage.py shell
+
+    from pysec.models import Index
